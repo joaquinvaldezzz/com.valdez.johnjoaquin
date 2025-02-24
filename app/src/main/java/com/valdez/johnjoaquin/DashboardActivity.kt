@@ -2,18 +2,36 @@ package com.valdez.johnjoaquin
 
 import Email
 import EmailAdapter
+import FragmentAdapter
 import android.content.Intent
 import android.os.Bundle
 import android.widget.ListView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.google.android.material.tabs.TabLayout
+import com.google.android.material.tabs.TabLayoutMediator
 
 class DashboardActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_dashboard)
+
+        val tabLayout = findViewById<TabLayout>(R.id.dashboard_tabs)
+        val viewPager = findViewById<ViewPager2>(R.id.view_pager)
+
+        val fragmentAdapter = FragmentAdapter(this)
+        viewPager.adapter = fragmentAdapter
+
+        TabLayoutMediator(tabLayout, viewPager) { tab, position ->
+            tab.text = when (position) {
+                0 -> "Tab 1"
+                1 -> "Tab 2"
+                else -> null
+            }
+        }.attach()
 
         val listView = findViewById<ListView>(R.id.list_view)
         val emails = listOf(
