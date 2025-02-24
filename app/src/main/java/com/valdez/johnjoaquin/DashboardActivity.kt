@@ -27,8 +27,8 @@ class DashboardActivity : AppCompatActivity() {
 
         TabLayoutMediator(tabLayout, viewPager) { tab, position ->
             tab.text = when (position) {
-                0 -> "Tab 1"
-                1 -> "Tab 2"
+                0 -> "Inbox"
+                1 -> "Sent"
                 else -> null
             }
         }.attach()
