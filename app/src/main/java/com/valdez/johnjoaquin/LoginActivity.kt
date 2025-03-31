@@ -35,7 +35,7 @@ class LoginActivity : AppCompatActivity() {
             if (username == storedUsername && password == storedPassword) {
                 Toast.makeText(this, "Logged in successfully", Toast.LENGTH_LONG).show()
 
-                val intent = Intent(this, LoginActivity::class.java)
+                val intent = Intent(this, DashboardActivity::class.java)
                 startActivity(intent)
 
                 finish()
