@@ -4,15 +4,15 @@
     android:height="108dp"
     android:viewportWidth="97"
     android:viewportHeight="150.1875">
-  <group
-      android:scaleX="0.2970953"
-      android:scaleY="0.46"
-      android:translateX="34.090878"
-      android:translateY="40.550625">
-    <group android:translateY="116.22656">
-      <path
-          android:fillColor="#F8FAFC"
-          android:pathData="M31.859375,-0Q21.734375,-0,18.140625,-3.65625Q14.5625,-7.3125,14.5625,-17.578125L14.5625,-32.421875L26.796875,-35.015625L26.796875,-10.34375L66.65625,-10.34375L66.65625,-74.328125L79.03125,-74.328125L79.03125,-17.578125Q79.03125,-7.390625,75.40625,-3.6875Q71.796875,-0,61.671875,-0L31.859375,-0Z" />
+    <group
+        android:scaleX="0.2970953"
+        android:scaleY="0.46"
+        android:translateX="34.090878"
+        android:translateY="40.550625">
+        <group android:translateY="116.22656">
+            <path
+                android:fillColor="#F8FAFC"
+                android:pathData="M31.859375,-0Q21.734375,-0,18.140625,-3.65625Q14.5625,-7.3125,14.5625,-17.578125L14.5625,-32.421875L26.796875,-35.015625L26.796875,-10.34375L66.65625,-10.34375L66.65625,-74.328125L79.03125,-74.328125L79.03125,-17.578125Q79.03125,-7.390625,75.40625,-3.6875Q71.796875,-0,61.671875,-0L31.859375,-0Z" />
+        </group>
     </group>
-  </group>
 </vector>
