@@ -22,7 +22,7 @@ class LoginActivity : AppCompatActivity() {
 
         sharedPreferences = getSharedPreferences("userPreferences", MODE_PRIVATE)
 
-        editTextUsername = findViewById(R.id.edittext_email_address)
+        editTextUsername = findViewById(R.id.edittext_username)
         editTextPassword = findViewById(R.id.edittext_password)
         buttonLogin = findViewById(R.id.button_login)
 
