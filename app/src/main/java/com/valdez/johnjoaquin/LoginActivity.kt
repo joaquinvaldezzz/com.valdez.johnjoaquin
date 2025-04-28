@@ -5,12 +5,15 @@ import android.content.SharedPreferences
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ScrollView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.snackbar.Snackbar
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var sharedPreferences: SharedPreferences
+    private lateinit var layout: ScrollView
     private lateinit var editTextUsername: EditText
     private lateinit var editTextPassword: EditText
     private lateinit var buttonLogin: Button
@@ -22,6 +25,7 @@ class LoginActivity : AppCompatActivity() {
 
         sharedPreferences = getSharedPreferences("userPreferences", MODE_PRIVATE)
 
+        layout = findViewById(R.id.activity_login)
         editTextUsername = findViewById(R.id.edittext_username)
         editTextPassword = findViewById(R.id.edittext_password)
         buttonLogin = findViewById(R.id.button_login)
@@ -40,7 +44,12 @@ class LoginActivity : AppCompatActivity() {
 
                 finish()
             } else {
-                Toast.makeText(this, "Incorrect username or password", Toast.LENGTH_SHORT).show()
+                val snackBar =
+                    Snackbar.make(layout, "Incorrect username or password", Snackbar.LENGTH_LONG)
+                snackBar.setAction("Try again") {
+                    editTextUsername.setText("")
+                    editTextPassword.setText("")
+                }.show()
             }
         }
     }
